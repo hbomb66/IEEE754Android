@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Decimal to IEEE 754</string>
+    <string name="hello_world">IEEEConversions</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_binary_to_decimal">Single Precision to Decimal</string>
+    <string name="title_activity_drawer">BinaryToDecimal</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+    <string name="action_example">Example action</string>
+    <string name="title_activity_double_precision_to_decimal">Double Precision To Decimal</string>
+
+</resources>

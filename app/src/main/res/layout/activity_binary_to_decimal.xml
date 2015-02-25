@@ -1,0 +1,147 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+android:paddingRight="@dimen/activity_horizontal_margin"
+android:paddingTop="@dimen/activity_vertical_margin"
+android:paddingBottom="@dimen/activity_vertical_margin"
+tools:context="com.helencreates.ieeeconversions.BinaryToDecimal">
+
+    <EditText
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:inputType="number"
+    android:maxLength="1"
+    android:ems="10"
+    android:id="@+id/signToDec"
+    android:layout_marginTop="10dp"
+    android:editable="true"
+    android:digits="0,1"
+    android:layout_alignLeft="@+id/btn_page1"
+    android:layout_alignStart="@+id/btn_page1"
+    android:layout_alignRight="@+id/btn_page1"
+    android:layout_alignEnd="@+id/btn_page1" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:maxLength="8"
+        android:digits="0,1"
+        android:ems="10"
+        android:id="@+id/expToDec"
+        android:layout_below="@+id/signToDec"
+        android:layout_alignLeft="@+id/btn_page1"
+        android:layout_alignStart="@+id/btn_page1"
+        android:layout_alignRight="@+id/btn_page1"
+        android:layout_alignEnd="@+id/btn_page1" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:maxLength="23"
+        android:digits="01"
+        android:ems="10"
+        android:id="@+id/manToDec"
+        android:layout_below="@+id/expToDec"
+        android:layout_alignLeft="@+id/btn_page1"
+        android:layout_alignStart="@+id/btn_page1"
+        android:layout_alignRight="@+id/btn_page1"
+        android:layout_alignEnd="@+id/btn_page1" />
+
+
+
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convert"
+        android:id="@+id/btn_convertBin"
+        android:clickable="true"
+        android:onClick="binToDec"
+        android:layout_below="@+id/manToDec"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/finalDec"
+        android:editable="false"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/btn_convertBin"
+        android:layout_alignRight="@+id/manToDec"
+        android:layout_alignEnd="@+id/manToDec" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:id="@+id/btn_clear2"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:onClick="clearFields2"
+        android:layout_below="@+id/finalDec"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Sign"
+        android:id="@+id/textView"
+        android:layout_above="@+id/expToDec"
+        android:layout_toLeftOf="@+id/signToDec"
+        android:layout_toStartOf="@+id/signToDec" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Exponent"
+        android:id="@+id/textView2"
+        android:layout_above="@+id/manToDec"
+        android:layout_toLeftOf="@+id/signToDec"
+        android:layout_toStartOf="@+id/signToDec" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Mantissa"
+        android:id="@+id/textView3"
+        android:layout_alignBottom="@+id/manToDec"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_alignEnd="@+id/textView2" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convert Double Precision to Decimal"
+        android:id="@+id/btn_page3"
+        android:layout_above="@+id/btn_page1"
+        android:layout_alignRight="@+id/btn_page1"
+        android:layout_alignEnd="@+id/btn_page1"
+        android:layout_alignParentStart="false"
+        android:clickable="true"
+        android:onClick="changePageToDoublePrec" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Decimal to IEEE 754 Conversion"
+        android:id="@+id/btn_page1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="changePage"
+        android:clickable="true" />
+
+</RelativeLayout>
+
+
